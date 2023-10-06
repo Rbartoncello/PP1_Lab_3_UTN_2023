@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Document</title>
+</head>
+<body id = "cuerpo">
+    <form id="form-data-container">
+        <div id="title-form">
+            Fomulario Datos
+        </div>
+        <div id="inputs-container">
+            <div>
+                <div id="field-type-filter">
+                    <label id="lbl-type-filter"for="ddl-type-filter">Filtar por:</label>
+                    <select id="ddl-type-filter" name="types-people">
+                        <option value="persona">Todos</option>
+                        <option value="empleado">Empleado</option>
+                        <option value="cliente">Cliente</option>
+                    </select>
+                </div>
+                <div id="field-calculate-age-average">
+                    <label id="lbl-calculate-age-average" for="input-name">Calcular Edad Promedio:</label>
+                    <input type="number" id="num-calculate-age-average" disabled>
+                    <button id="btn-calculate-age-average">Calcular</button>
+                </div>
+                <div id="field-ckl-colums">
+                    <div id="lbl-ckl-colums">
+                        Mostrar Columnas:
+                    </div>
+                    <div id="ckl-colums-to-show">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="table-container">
+            <table id="data-table">
+                <thead id="header">
+                    </thead>
+                    <tbody id="table-body"></tbody>
+            </table>
+        </div>
+        <div id="buttons-container">
+            <div>
+                <button type="submit" id="btn-go-abm">Agregar</button>
+            </div>
+        </div>
+    </div>
+    </form>
+    <form id="form-amb-container" class="hidden">
+        <h1 id="title-form">
+            Fomulario ABM
+        </h1>
+        <div id="inputs-container">
+            <div id="default-inputs-container"></div>
+            <div id="input-field">
+                <label for="dll-type-person">Tipo:</label>
+                <select id="dll-type-person" name="types-people">
+                    <option value="empleado">Empleado</option>
+                    <option value="cliente">Cliente</option>
+                </select>
+            </div>
+            <div id="dynamic-inputs-container"></div>
+        </div>
+        <div id="btns-container-edit-delete">
+            <button type="submit" id="btn-edit">Modificación</button>
+            <button type="submit" id="btn-delete">Eliminar</button>
+        </div>
+        <div id="btns-container-add">
+            <div>
+                <button type="submit" id="btn-add">Alta</button>
+                <button type="button" id="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</body>
+    <script src="dataString.js"></script>
+    <script src="constant.js"></script>
+    <script src="Classes/Persona.js"></script>
+    <script src="Classes/Cliente.js"></script>
+    <script src="Classes/Empleado.js"></script>
+    <script src="enum.js"></script>
+    <script src="utils.js"></script>
+    <script src="main.js"></script>
+</html>
