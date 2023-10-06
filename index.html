@@ -16,13 +16,13 @@
                 <div id="field-type-filter">
                     <label id="lbl-type-filter"for="ddl-type-filter">Filtar por:</label>
                     <select id="ddl-type-filter" name="types-people">
-                        <option value="persona">Todos</option>
-                        <option value="empleado">Empleado</option>
-                        <option value="cliente">Cliente</option>
+                        <option value="vehiculo">Vehiculo</option>
+                        <option value="aereo">Aereo</option>
+                        <option value="terrestre">Terrestre</option>
                     </select>
                 </div>
                 <div id="field-calculate-age-average">
-                    <label id="lbl-calculate-age-average" for="input-name">Calcular Edad Promedio:</label>
+                    <label id="lbl-calculate-age-average" for="input-name">Calcular Velocidad Promedio:</label>
                     <input type="number" id="num-calculate-age-average" disabled>
                     <button id="btn-calculate-age-average">Calcular</button>
                 </div>
@@ -58,8 +58,8 @@
             <div id="input-field">
                 <label for="dll-type-person">Tipo:</label>
                 <select id="dll-type-person" name="types-people">
-                    <option value="empleado">Empleado</option>
-                    <option value="cliente">Cliente</option>
+                    <option value="aereo">Aereo</option>
+                    <option value="terrestre">Terrestre</option>
                 </select>
             </div>
             <div id="dynamic-inputs-container"></div>
@@ -78,9 +78,9 @@
 </body>
     <script src="dataString.js"></script>
     <script src="constant.js"></script>
-    <script src="Classes/Persona.js"></script>
-    <script src="Classes/Cliente.js"></script>
-    <script src="Classes/Empleado.js"></script>
+    <script src="Classes/Vehiculo.js"></script>
+    <script src="Classes/Aereo.js"></script>
+    <script src="Classes/Terrestre.js"></script>
     <script src="enum.js"></script>
     <script src="utils.js"></script>
     <script src="main.js"></script>

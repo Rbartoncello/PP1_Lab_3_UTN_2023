@@ -1,16 +1,16 @@
 const inputsDefault = [
-    { name: "Id", id: "id", type: "text" },
-    { name: "Nombre", id: "nombre", type: "text" },
-    { name: "Apellido", id: "apellido", type: "text" },
-    { name: "Edad", id: "edad", type: "number", min: 1},
+  { name: "Id", id: "id", type: "text" },
+  { name: "Modelo", id: "modelo", type: "text" },
+  { name: "Año de fabricacion", id: "anoFab", type: "number", min: 1885 },
+  { name: "Velocidad Maxima", id: "velMax", type: "number", min: 0 },
 ];
 
-const inputsEmployee = [
-{ name: "Sueldo", id: "sueldo", type: "number", min: 0},
-{ name: "Ventas", id: "ventas", type: "number", min: 0},
+const inputsAir = [
+  { name: "Altura Maxima", id: "altMax", type: "number", min: 0 },
+  { name: "Autonomia", id: "autonomia", type: "number", min: 0 },
 ];
 
-const inputsCustomer = [
-{ name: "Compras", id: "compras", type: "number", min: 0},
-{ name: "Telefono", id: "telefono", type: "text" },
+const inputsLand = [
+  { name: "Cantidad Puertas", id: "cantPue", type: "number", min: -1 },
+  { name: "Cantidad Ruedas", id: "cantRue", type: "number", min: 0 },
 ];

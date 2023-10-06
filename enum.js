@@ -1,5 +1,5 @@
 const typePerson = {
-    "empleado": Empleado,
-    "cliente": Cliente,
-    "persona": Persona
+    "vehiculo": Vehiculo,
+    "aereo": Aereo,
+    "terrestre": Terrestre
 };
