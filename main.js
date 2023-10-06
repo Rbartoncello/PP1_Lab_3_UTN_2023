@@ -202,7 +202,7 @@ const onChangeFilterType = (value) => {
   inputCalculateAgeAverage.value = "";
 
   uploadDataTable(filterByTypePerson(value));
-  onClickHeader(filterByTypePerson(value));
+  onClickHeader();
 };
 
 const heardersToShow = () => {
@@ -262,13 +262,15 @@ const uploadDataTable = (data) => {
   showColumnsByType();
 };
 
-const onClickHeader = (rows) => {
+const onClickHeader = () => {
   const hearders = document.querySelectorAll("th");
 
   hearders.forEach((header) => {
     header.addEventListener("click", (e) => {
       e.preventDefault();
       const orderKey = e.target.id.replace("header-", "");
+     
+      const rows = filterByTypePerson($("ddl-type-filter").value)
 
       uploadDataTable(orderByKey(orderKey, rows));
       const checkboxDivs = document.querySelectorAll("input[type='checkbox']");
@@ -416,7 +418,7 @@ const deletePerson = (formData) => {
   const personEdited = getFormDataAsObject(formData);
 
   const personId = parseInt(personEdited.id);
-  people = people.filter((person) => person.id !== personId);
+  people = people.filter((person) => person.id.toString() !== personId.toString());
 
   if (people) {
     uploadDataTable(people);
@@ -490,7 +492,7 @@ const initializeDocument = () => {
   addCheckboxs();
   addTable();
   uploadDataTable(people);
-  onClickHeader(people);
+  onClickHeader();
   onDoubleClickOnTable();
 
   const typeField = $("ddl-type-filter");
